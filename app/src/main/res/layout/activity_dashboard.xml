@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".module.adminspv.DashboardActivity">
+    <include android:id="@+id/toolbar" layout="@layout/toolbar" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:background="@color/colorPrimaryDark">
+        <LinearLayout
+            android:id="@+id/linearProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingLeft="@dimen/spacing_14dp"
+            android:paddingRight="@dimen/spacing_14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="10dp"
+                android:text="Mohammad Toriq"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:id="@+id/role"
+                android:text="SPV Kota Malang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_small"/>
+
+        </LinearLayout>
+        <TextView
+            android:layout_below="@+id/linearProfile"
+            android:id="@+id/editButton"
+            android:text="Ubah"
+            android:gravity="center"
+            android:background="?android:selectableItemBackground"
+            android:drawableLeft="@drawable/ic_create_white_24dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_normal"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+</LinearLayout>

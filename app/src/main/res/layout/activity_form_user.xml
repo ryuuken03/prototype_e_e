@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".module.adminspv.FormUserActivity">
+
+    <include android:id="@+id/toolbar" layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_default">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textName"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:hint="@string/text_name"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputTextName"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_place_white_24dp"
+                        android:paddingLeft="10dp"
+                        android:tint="@color/colorBlack2"
+                        android:layout_gravity="center_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="3dp"
+                            android:text="@string/text_province"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp" />
+
+                        <Spinner
+                            android:id="@+id/province"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/spacing_10dp"
+                            android:paddingRight="@dimen/spacing_5dp"
+                            android:spinnerMode="dialog" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/colorGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearProvince"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:src="@drawable/ic_place_white_24dp"
+                        android:tint="@color/colorBlack2" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="3dp"
+                            android:text="@string/text_city"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp" />
+
+                        <Spinner
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/spacing_10dp"
+                            android:paddingRight="@dimen/spacing_5dp"
+                            android:spinnerMode="dialog" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/colorGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearCity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textEmail"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_email_black_24dp"
+                        android:hint="@string/text_email"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputTextEmail">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textPhone"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_call_white_24dp"
+                        android:drawableTint="@color/colorBlack2"
+                        android:hint="@string/text_phone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputTextPhone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"/>
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textPassword"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:drawableTint="@color/colorBlack2"
+                        android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"
+                        android:hint="@string/text_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_below="@+id/relativeForm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_margin="@dimen/spacing_default"
+                android:background="@drawable/rounded_background_primary"
+                android:text="@string/action_save"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".module.adminspv.FormMerchantActivity">
+
+    <include android:id="@+id/toolbar" layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_default">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textMerchant"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:drawableLeft="@drawable/ic_front_store"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_name_merchant"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextOwner"
+                    android:layout_below="@+id/inputTextMerchant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textOwner"
+                        android:paddingLeft="10dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_name_owner"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputTextOwner"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_business_black_24dp"
+                        android:tint="@color/colorBlack2"
+                        android:layout_gravity="center_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="3dp"
+                            android:text="@string/text_province"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp" />
+
+                        <Spinner
+                            android:id="@+id/province"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/spacing_10dp"
+                            android:paddingRight="@dimen/spacing_5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:spinnerMode="dialog" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/colorGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearProvince"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_business_black_24dp"
+                        android:tint="@color/colorBlack2" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="3dp"
+                            android:text="@string/text_city"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp" />
+
+                        <Spinner
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/spacing_10dp"
+                            android:paddingRight="@dimen/spacing_5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:spinnerMode="dialog" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/colorGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearCity">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textAddress"
+                        android:paddingLeft="10dp"
+                        android:drawableLeft="@drawable/ic_account_balance_black_24dp"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_place_white_24dp"
+                        android:drawableTint="@color/colorBlack2"
+                        android:hint="@string/text_adddress_merchant"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:id="@+id/linearCoordinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputTextAddress"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_place_white_24dp"
+                        android:tint="@color/colorBlack2" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="3dp"
+                            android:text="@string/text_coordinat"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/coordinate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/spacing_10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="14sp"
+                            android:text="@string/text_choose_coordinate"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/colorGrey" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/inputTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearCoordinate">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textPhone"
+                        android:paddingLeft="10dp"
+                        android:drawableLeft="@drawable/ic_call_white_24dp"
+                        android:drawableTint="@color/colorBlack2"
+                        android:drawablePadding="@dimen/spacing_10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_no_phone"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textSize="@dimen/text_size_small" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/inputTextPhone"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_photo_camera_black_24dp"
+                        android:tint="@color/colorBlack2"
+                        android:paddingLeft="10dp"
+                        android:layout_gravity="center_vertical"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="7dp"
+                            android:paddingBottom="5dp"
+                            android:text="@string/text_image_merchant"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="11sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:id="@+id/area"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="180dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:scaleType="fitCenter"
+                                    android:background="@color/colorGrey" />
+                            </LinearLayout>
+                            <ImageView
+                                android:id="@+id/takePhoto"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/ic_add_a_photo_black_24dp"
+                                android:scaleType="centerInside"
+                                android:layout_centerInParent="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_below="@+id/relativeForm"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height_normal"
+                android:layout_margin="@dimen/spacing_default"
+                android:background="@drawable/rounded_background_primary"
+                android:text="@string/action_save"
+                android:textColor="@color/colorWhite"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

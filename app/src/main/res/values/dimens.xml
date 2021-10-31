@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--All dimen variable must be placed here-->
+
+    <!--spacing-->
+    <dimen name="spacing_default">16dp</dimen>
+    <dimen name="spacing_2x">36dp</dimen>
+    <dimen name="spacing_1dp">1dp</dimen>
+    <dimen name="spacing_3dp">3dp</dimen>
+    <dimen name="spacing_4dp">4dp</dimen>
+    <dimen name="spacing_5dp">5dp</dimen>
+    <dimen name="spacing_7dp">7dp</dimen>
+    <dimen name="spacing_10dp">10dp</dimen>
+    <dimen name="spacing_14dp">14dp</dimen>
+    <dimen name="spacing_15dp">15dp</dimen>
+    <dimen name="spacing_small">10dp</dimen>
+    <dimen name="spacing_extra_small">5dp</dimen>
+    <dimen name="spacing_half">5dp</dimen>
+    <dimen name="card_text_spacing">5dp</dimen>
+    <dimen name="card_spacing">3dp</dimen>
+    <dimen name="edit_text_height">40dp</dimen>
+
+    <!--Font size-->
+    <dimen name="text_size_extra_large">36sp</dimen>
+    <dimen name="text_size_26sp">26sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_extra_normal">18sp</dimen>
+    <dimen name="text_size_normal">16sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_extra_small">12sp</dimen>
+    <dimen name="text_size_super_small">10sp</dimen>
+
+    <!--image size-->
+    <dimen name="image_size_extra_large">400dp</dimen>
+    <dimen name="image_size_large">200dp</dimen>
+    <dimen name="image_size_small">70dp</dimen>
+    <dimen name="image_size_smaller">55dp</dimen>
+    <dimen name="image_size_extra_small">48dp</dimen>
+    <dimen name="image_size_extra2x_small">36dp</dimen>
+
+    <!--view size-->
+    <dimen name="dialog_header_height">50dp</dimen>
+    <dimen name="button_height_normal">40dp</dimen>
+    <dimen name="promotion_pager_height">158dp</dimen>
+    <dimen name="promotion_indicator_height">48dp</dimen>
+    <dimen name="bottom_nav_menu_height">56dp</dimen>
+    <dimen name="nav_drawer_menu_width">240dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="spinner_height_normal">40dp</dimen>
+    <dimen name="edit_text_height_normal">40dp</dimen>
+    <dimen name="dialog_height">250dp</dimen>
+
+    <dimen name="account_photo_size">140dp</dimen>
+    <dimen name="account_photo_100dp">100dp</dimen>
+    <dimen name="account_photo_80dp">80dp</dimen>
+    <dimen name="account_photo_30dp">30dp</dimen>
+
+    <dimen name="button_accept_reject">30dp</dimen>
+    <dimen name="dimen48">48dp</dimen>
+
+
+
+</resources>

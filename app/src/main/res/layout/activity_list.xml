@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:theme="@style/DefTheme"
+    tools:context=".module.adminspv.ListActivity">
+
+    <include android:id="@+id/toolbar" layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/dialog_header_height"
+            android:layout_height="@dimen/dialog_header_height"
+            android:layout_marginTop="@dimen/spacing_default"
+            android:src="@drawable/ic_block_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_5dp"
+            android:text="@string/error_no_data"
+            android:textSize="@dimen/text_size_normal" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:scrollbars="none" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height_normal"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/rounded_background_primary"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>
