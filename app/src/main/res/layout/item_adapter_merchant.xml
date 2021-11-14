@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_adapter_merchant"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/linearMerchant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/imageMerchant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_front_store"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/nameMerchant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/imageMerchant"/>
+            />
+            <TextView
+                android:id="@+id/addressMerchant"
+                android:layout_below="@+id/nameMerchant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/imageMerchant"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_chevron_right_black_24dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

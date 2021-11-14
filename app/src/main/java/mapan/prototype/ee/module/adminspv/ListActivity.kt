@@ -11,15 +11,14 @@ import com.mikepenz.fastadapter.binding.BindingViewHolder
 import com.mikepenz.fastadapter.listeners.ClickEventHook
 import mapan.prototype.ee.R
 import mapan.prototype.ee.adapter.AdapterData
-import mapan.prototype.ee.adapter.AdapterMenu
 import mapan.prototype.ee.config.Constants
-import mapan.prototype.ee.databinding.ActivityDashboardBinding
 import mapan.prototype.ee.databinding.ActivityListBinding
 import mapan.prototype.ee.databinding.ItemAdapterDataBinding
 import mapan.prototype.ee.model.Merchant
 import mapan.prototype.ee.model.Transaction
 import mapan.prototype.ee.module.core.BaseActivity
-import mapan.prototype.ee.module.main.LoginActivity
+import mapan.prototype.ee.module.md.FormProductActivity
+import mapan.prototype.ee.module.md.FormTransactionActivity
 import java.util.*
 
 class ListActivity : BaseActivity() {

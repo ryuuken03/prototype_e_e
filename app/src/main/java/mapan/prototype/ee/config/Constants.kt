@@ -35,6 +35,8 @@ class Constants {
         val storageRequestCode = 6
         val cropResultRequestCode = 7
 
+        val check = 10
+
         val DATA_ID = "ID"
         val DATA_NAME = "NAME"
         val DATA_OBJ = "OBJ"

@@ -1,5 +1,6 @@
 package mapan.prototype.ee.module.md
 
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.os.Build
@@ -128,8 +129,9 @@ class DashboardFragment : Fragment(), InitializerUi {
                     main!!.timeActivity = "work"
                     loadData()
                 }else{
-//                    var change = Intent(main,ListMerchantActivity::class.java)
-//                    startActivity(change)
+                    var change = Intent(main,ListMerchantActivity::class.java)
+                    change.putExtra("email",main.email)
+                    startActivity(change)
                 }
             }
 

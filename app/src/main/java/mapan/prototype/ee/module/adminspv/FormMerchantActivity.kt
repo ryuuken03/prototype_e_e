@@ -20,6 +20,7 @@ import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.gms.maps.model.LatLng
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import mapan.prototype.ee.R
@@ -120,9 +121,8 @@ class FormMerchantActivity : BaseActivity() {
         }
 
         binding.linearCoordinate.setOnClickListener {
-
-//            val intent = Intent(this@FormMerchantActivity, PickLocationActivity::class.java)
-//            startActivityForResult(intent, PickLocationActivity.FORM_LOCATION)
+            val intent = Intent(this@FormMerchantActivity, PickLocationActivity::class.java)
+            startActivityForResult(intent, PickLocationActivity.FORM_LOCATION)
         }
 
         binding.area.setOnClickListener {
@@ -394,18 +394,17 @@ class FormMerchantActivity : BaseActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-//        if (requestCode == PickLocationActivity.FORM_LOCATION) {
-//            if (resultCode == Activity.RESULT_OK) {
-//                val address = data?.getStringExtra(PickLocationActivity.LOCATION_NAME)
-//                val latLng = data?.getParcelableExtra<LatLng>(PickLocationActivity.LOCATION_LATLNG)
-//                location = Place()
-//                location!!.latitude = latLng!!.latitude
-//                location!!.longitude = latLng!!.longitude
-//                var message = latLng!!.latitude.toString()+":"+latLng!!.longitude
-//                coordinate.setText(getString(R.string.text_coordinate_choosed))
-//            }
-//        }else
-        if(requestCode == Constants.imageCaptureRequestCode){
+        if (requestCode == PickLocationActivity.FORM_LOCATION) {
+            if (resultCode == Activity.RESULT_OK) {
+                val address = data?.getStringExtra(PickLocationActivity.LOCATION_NAME)
+                val latLng = data?.getParcelableExtra<LatLng>(PickLocationActivity.LOCATION_LATLNG)
+                location = Place()
+                location!!.latitude = latLng!!.latitude
+                location!!.longitude = latLng!!.longitude
+                var message = latLng!!.latitude.toString()+":"+latLng!!.longitude
+                binding.coordinate.setText(getString(R.string.text_coordinate_choosed))
+            }
+        }else if(requestCode == Constants.imageCaptureRequestCode){
             if (resultCode == Activity.RESULT_OK) {
                 var fullPath = file!!.path
 

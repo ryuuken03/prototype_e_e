@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mapan.prototype.ee">
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -18,8 +19,10 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:hardwareAccelerated="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:largeHeap="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
 <!--        android:theme="@style/Theme.PrototypeEE">-->
@@ -50,10 +53,10 @@
             android:name=".module.adminspv.FormMerchantActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".module.adminspv.FormProductActivity"
+            android:name=".module.md.FormProductActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".module.adminspv.FormTransactionActivity"
+            android:name=".module.md.FormTransactionActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".module.adminspv.FormDisplayActivity"
@@ -67,6 +70,15 @@
         <activity
             android:name=".module.md.LocationMerchantActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".module.adminspv.PickLocationActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".module.md.ListMerchantActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".module.md.DetailMerchantActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="mapan.prototype.ee.fileProvider"
@@ -77,7 +89,7 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_map_api_key" />

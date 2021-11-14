@@ -21,7 +21,6 @@ import mapan.prototype.ee.config.Constants
 import mapan.prototype.ee.databinding.FragmentCheckinBinding
 import mapan.prototype.ee.model.Merchant
 import mapan.prototype.ee.module.adminspv.FormDisplayActivity
-import mapan.prototype.ee.module.adminspv.FormTransactionActivity
 import mapan.prototype.ee.util.InitializerUi
 
 class CheckInFragment : Fragment(), InitializerUi {

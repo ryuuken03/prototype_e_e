@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context=".module.adminspv.FormProductActivity">
+    tools:context=".module.md.FormProductActivity">
 
     <include android:id="@+id/toolbar"  layout="@layout/toolbar" />
 

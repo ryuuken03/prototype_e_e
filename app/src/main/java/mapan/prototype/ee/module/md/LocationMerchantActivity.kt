@@ -70,7 +70,7 @@ class LocationMerchantActivity : BaseActivity() {
 
     override fun initConfig() {
         email = intent.getStringExtra("email")
-        name = intent.getStringExtra("name")
+        name = intent.getStringExtra(Constants.DATA_NAME)
         lat = intent.getDoubleExtra(Constants.DATA_LAT,-1.0)
         lng = intent.getDoubleExtra(Constants.DATA_LNG,-1.0)
         initUI()

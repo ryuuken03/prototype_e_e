@@ -127,11 +127,7 @@ class MainActivity : BaseActivity() , BottomNavigationView.OnNavigationItemSelec
                                 dialog.dismiss()
                             }, false)
                 }else{
-                    showPromptDialog(getString(R.string.text_alert), getString(R.string.text_ask_logout),
-                            getString(R.string.action_ok), View.OnClickListener {
-                        logout()
-                        dialog.dismiss()
-                    }, false)
+                    logout()
                 }
             }
         }
@@ -140,9 +136,9 @@ class MainActivity : BaseActivity() , BottomNavigationView.OnNavigationItemSelec
     fun logout(){
         showPromptDialog(getString(R.string.text_confirmation), getString(R.string.text_ask_logout),
                 getString(R.string.action_ok), View.OnClickListener {
+            dialog.dismiss()
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-            dialog.dismiss()
         }, false)
     }
     open fun changeFragment(newFragment: Fragment) {

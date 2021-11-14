@@ -1,6 +1,5 @@
 package mapan.prototype.ee.adapter
 
-import android.content.Context
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -10,9 +9,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.mikepenz.fastadapter.binding.AbstractBindingItem
 import mapan.prototype.ee.R
-import mapan.prototype.ee.databinding.ItemAdapterMenuBinding
 import mapan.prototype.ee.databinding.ItemAdapterProductTransactionBinding
-import mapan.prototype.ee.module.adminspv.FormTransactionActivity
+import mapan.prototype.ee.module.md.FormTransactionActivity
 import mapan.prototype.ee.util.InitializerUi
 import java.text.NumberFormat
 import java.util.*

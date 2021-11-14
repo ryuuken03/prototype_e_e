@@ -1,4 +1,4 @@
-package mapan.prototype.ee.module.adminspv
+package mapan.prototype.ee.module.md
 
 import android.app.Activity
 import android.content.Intent
@@ -12,8 +12,6 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.util.Base64
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import androidx.core.content.FileProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,9 +21,7 @@ import com.mikepenz.fastadapter.adapters.ItemAdapter
 import mapan.prototype.ee.R
 import mapan.prototype.ee.adapter.AdapterMenu
 import mapan.prototype.ee.config.Constants
-import mapan.prototype.ee.databinding.ActivityFormMerchantBinding
 import mapan.prototype.ee.databinding.ActivityFormProductBinding
-import mapan.prototype.ee.model.Place
 import mapan.prototype.ee.module.core.BaseActivity
 import mapan.prototype.ee.util.PermissionHelper
 import mapan.prototype.ee.util.Util

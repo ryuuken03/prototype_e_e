@@ -1,4 +1,4 @@
-package mapan.prototype.ee.module.adminspv
+package mapan.prototype.ee.module.md
 
 import android.content.Intent
 import android.os.Bundle
